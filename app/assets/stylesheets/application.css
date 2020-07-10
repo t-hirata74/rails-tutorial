@@ -1,3 +1,9 @@
+ /* マニフェストファイル
+  コンパイル対象のファイルをここに記述する 
+  require_self: マニフェストファイル内の記述も対象にする
+  require_tree: 引数のPATH以下のファイルを対象にする
+  */
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
