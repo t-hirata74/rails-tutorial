@@ -9,11 +9,11 @@ COPY Gemfile /rails-tutorial/Gemfile
 COPY Gemfile.lock /rails-tutorial/Gemfile.lock
 RUN gem install bundler
 RUN bundle install
+RUN yarn install --check-files
 
 COPY . /rails-tutorial
 COPY entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/entrypoint.sh
-RUN yarn install --check-files
 
 ENTRYPOINT ["entrypoint.sh"]
 EXPOSE 3000
