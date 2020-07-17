@@ -31,3 +31,7 @@ TIPS：なぜアセットパイプライン？
 
 # authenticateメソッド
 ・パスワードを引数にしてユーザの認証を行うことができる
+
+# herokuのmigrate
+heroku run migrate
+そのままではDBが無いので「heroku addons:add heroku-postgresql」でdbを使えるようにする
