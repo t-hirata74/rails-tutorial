@@ -14,6 +14,11 @@ class UsersController < ApplicationController
     @user = User.create(user_params)
     if @user.save
       # Success
+      flash[:success] = "Welcome to the Sample App!"
+      redirect_to @user
+      # redirect_to user_path(@user)
+      # redirect_to user_path(@user.id)
+      # redirect_to user_path(1)
     else
       # Failure
       render 'new'
