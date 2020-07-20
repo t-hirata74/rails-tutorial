@@ -35,3 +35,4 @@ TIPS：なぜアセットパイプライン？
 # herokuのmigrate
 heroku run migrate
 そのままではDBが無いので「heroku addons:add heroku-postgresql」でdbを使えるようにする
+
