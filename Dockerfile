@@ -9,7 +9,7 @@ COPY Gemfile /rails-tutorial/Gemfile
 COPY Gemfile.lock /rails-tutorial/Gemfile.lock
 RUN gem install bundler
 RUN bundle install
-RUN yarn install --check-files
+RUN yarn install --check-files &&  yarn add jquery@3.4.1 bootstrap@3.4.1
 
 COPY . /rails-tutorial
 COPY entrypoint.sh /usr/bin/
