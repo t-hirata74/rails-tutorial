@@ -11,16 +11,12 @@ class UsersController < ApplicationController
 
   # POST /users (+ params)
   def create
-    @user = User.create(user_params)
+    @user = User.new(user_params)
     if @user.save
-      # Success
+      log_in @user
       flash[:success] = "Welcome to the Sample App!"
       redirect_to @user
-      # redirect_to user_path(@user)
-      # redirect_to user_path(@user.id)
-      # redirect_to user_path(1)
     else
-      # Failure
       render 'new'
     end
   end
