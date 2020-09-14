@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :microposts, dependent: :destroy
   attr_accessor :remember_token, :activation_token, :reset_token # 仮想的な属性を作成、DBとは連携しないで保持できる変数
   before_save   :downcase_email
   # before_save { self.email = self.email.downcase }

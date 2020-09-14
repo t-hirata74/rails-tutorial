@@ -9,7 +9,7 @@ COPY Gemfile /rails-tutorial/Gemfile
 COPY Gemfile.lock /rails-tutorial/Gemfile.lock
 RUN gem install bundler
 RUN bundle install
-RUN yarn install --check-files &&  yarn add jquery@3.4.1 bootstrap@3.4.1
+RUN yarn install --check-files &&  yarn add jquery@3.4.1 bootstrap@3.4.1 && apt-get -y install imagemagick
 
 COPY . /rails-tutorial
 COPY entrypoint.sh /usr/bin/
